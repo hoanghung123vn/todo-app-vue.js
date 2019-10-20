@@ -1,118 +1,53 @@
 {
   "todos": [
     {
-      "userId": 1,
-      "id": 1,
-      "title": "delectus aut autem",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": 2,
-      "title": "quis ut nam facilis et officia qui",
-      "completed": false
-    },
-    {
-      "userId": 1,
       "id": 3,
-      "title": "fugiat veniam minus",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "title": "et porro tempora sdasda",
+      "title": "hello",
+      "description": "Vue is so cool",
       "completed": false,
-      "id": 4
+      "created_at": "Sun Oct 20 2019"
     },
     {
-      "userId": 1,
+      "id": 4,
+      "title": "hello",
+      "description": "Vue is so cool",
+      "completed": false,
+      "created_at": "Sun Oct 20 2019"
+    },
+    {
       "id": 5,
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
+      "title": "hello sdadad new 1",
+      "description": "Vue is so cool",
+      "completed": false,
+      "created_at": "Sun Oct 20 2019"
     },
     {
-      "userId": 1,
       "id": 6,
-      "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false
+      "title": "adsdad",
+      "description": "dasdd",
+      "completed": false,
+      "created_at": "Sun Oct 20 2019"
     },
     {
-      "userId": 1,
       "id": 7,
-      "title": "illo expedita consequatur quia in",
-      "completed": false
+      "title": "Hoc TTUD",
+      "description": "is my life",
+      "completed": false,
+      "created_at": "Mon Oct 21 2019"
     },
     {
-      "userId": 1,
       "id": 8,
-      "title": "quo adipisci enim quam ut ab",
-      "completed": true
+      "title": "hello",
+      "description": "Vue is so cool",
+      "completed": false,
+      "created_at": "Mon Oct 21 2019"
     },
     {
-      "userId": 1,
       "id": 9,
-      "title": "molestiae perspiciatis ipsa",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "title": "Bài tập 1 - 4sdsad",
+      "title": "Bài tập 1 - 4",
+      "description": "Vue is so cool sdsdad dsadad",
       "completed": false,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "title": "ddsadasd new",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "title": "Bài tập 1 - 4 nhóm 03 new new 3",
-      "completed": false,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "title": "Đặc tả 2 use case Thanh toán, In vé; update readme.md",
-      "completed": false,
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "title": "hello 3 6",
-      "completed": false,
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "title": "hello 4 5",
-      "completed": false,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "title": "sau",
-      "completed": false,
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "title": "hello 1",
-      "completed": false,
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "title": "Đặc tả 2 use case Thanh toán, In vé; update readme.mddsdsd",
-      "completed": false,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "title": "newe new",
-      "completed": false,
-      "id": 25
+      "created_at": "Mon Oct 21 2019"
     }
   ]
 }

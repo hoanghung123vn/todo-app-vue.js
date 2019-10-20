@@ -7,15 +7,25 @@
           type="text"
           name="title"
           v-model="title"
-          :class="[(errors.length > 0) ? 'invalid' : 'validate']"
+          :class="[(errors.title) ? 'invalid' : 'validate']"
         />
         <span class="helper-text" data-error="Title must not empty"></span>
-        <button
-          class="btn waves-effect waves-light submit-btn"
-          type="submit"
-          name="action"
-        >{{id ? "Update" : "Add"}}</button>
       </div>
+      <div class="input-field">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          name="description"
+          v-model="description"
+          :class="[(errors.description) ? 'invalid' : 'validate']"
+        />
+        <span class="helper-text" data-error="Description must not empty"></span>
+      </div>
+      <button
+        class="btn waves-effect waves-light submit-btn"
+        type="submit"
+        name="action"
+      >{{id ? "Update" : "Add"}}</button>
     </form>
     <div class="progress" v-else>
       <div class="indeterminate"></div>
@@ -32,7 +42,11 @@ export default {
     return {
       loading: false,
       title: "",
-      errors: [],
+      description: "",
+      errors: {
+        title: 0,
+        description: 0
+      },
       id: null
     };
   },
@@ -43,6 +57,7 @@ export default {
     editingTask(task) {
       this.id = task.id;
       this.title = task.title;
+      this.description = task.description;
     }
   },
   methods: {
@@ -53,10 +68,11 @@ export default {
       }
       this.loading = true;
       const task = {
-        userId: 1,
+        id: this.id,
         title: this.title,
+        description: this.description,
         completed: false,
-        id: this.id
+        created_at: new Date().toDateString()
       };
       try {
         const res = await taskService.createTask(task);
@@ -66,16 +82,20 @@ export default {
         this.loading = false;
         this.title = "";
         this.id = null;
+        this.description = "";
       } catch (error) {
         console.log(error);
       }
     },
     validateForm() {
-      this.errors = [];
+      this.errors = {};
       if (this.title.trim() === "") {
-        this.errors.push("Title");
+        this.errors.title = 1;
       }
-      if (this.errors.length > 0) return false;
+      if (this.description.trim() === "") {
+        this.errors.description = 1;
+      }
+      if (Object.keys(this.errors).length > 0) return false;
       return true;
     }
   }
@@ -85,8 +105,5 @@ export default {
 <style scoped>
 .form {
   margin: 20px;
-}
-.submit-btn {
-  margin-top: 10px;
 }
 </style>

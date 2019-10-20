@@ -15,8 +15,18 @@
       <div class="col s6" v-for="(task, index) in tasks" :index="index" :item="task" :key="task.id">
         <div class="card">
           <div class="card-content">
-            <h6 class="title">Title: {{task.title}}</h6>
-            <div class="status">{{task.completed ? "Completed" : "Incomplete"}}</div>
+            <h5 class="title blue-text text-darken-2">{{task.title}}</h5>
+            <p class="description grey-text text-darken-2">{{task.description}}</p>
+            <p class="created_at">
+              <i>
+                <b>Created at: {{task.created_at}}</b>
+              </i>
+            </p>
+            <div class="status teal-text text-darken-2">
+              <i>
+                <b>Status: {{task.completed ? "Completed" : "Incomplete"}}</b>
+              </i>
+            </div>
           </div>
           <div class="card-action">
             <a href="#" class="waves-effect waves-light btn edit-btn" @click="editTask(task)">Edit</a>
@@ -53,7 +63,6 @@ export default {
       if (this.tasks.find(t => t.id === task.id)) {
         const index = this.tasks.findIndex(t => t.id === task.id);
         this.tasks.splice(index, 1, task);
-        this.editingTask = null;
       } else this.tasks.unshift(task);
     },
     editTask(task) {
@@ -95,5 +104,8 @@ export default {
 }
 .delete-btn {
   background: rgb(219, 121, 121);
+}
+.description {
+  margin: 10px !important;
 }
 </style>
